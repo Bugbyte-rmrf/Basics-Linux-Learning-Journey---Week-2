@@ -20,20 +20,22 @@ To truly understand how Bash interprets commands, I practiced extensively in the
 ls -lh /home
 ```
 
-What it does: Lists the contents of the '/home' directory in a long (-l) and human-readable (-h) format.
+What it does: Lists the contents of the `/home`directory in a long ( `-l `) and human-readable (`-h`) format.
 
-Breakdown: ls is the command, -lh are the combined options, and /home is the argument.
+Breakdown: `ls` is the command, `-lh`are the combined options, and `/home` is the argument.
 
-**2. Working with Variables**
-
-Bashvariable1='Something'
+**2. Working with Variables and the Environment**
+```bash
+variable1='Something'
 export variable1
 echo $variable1
+```
 
-What it does: Creates a local variable named variable1, turns it into an environment variable using export, and prints its value to the screen using echo.
+What it does: Creates a local variable named `variable1`, turns it into an environment variable using `export`, and prints its value to the screen using `echo`.
 
 **3. Checking the PATH**
-Bashecho $PATH
+Bash
+echo $PATH
 What it does: Displays the directories that Bash searches to find executable commands, separated by colons.
 
 **4. Identifying Command Types**
