@@ -132,7 +132,7 @@ The module explained that the terms Free and Open Source Software (FOSS) and Fre
 I learned that software licenses are not always appropriate for other types of creative work. For example, someone creating a photograph, article, illustration or educational resource may want to allow others to use their work while placing certain conditions on that use.
 This is where Creative Commons (CC) licenses are useful.
 
-Main Creative Commons conditions
+Main Creative Commons conditions:
 * **BY — Attribution**: The creator must be credited.
 
 * **SA — ShareAlike**: Modified versions must generally be shared under the same licensing terms.
@@ -160,18 +160,18 @@ At first, open source business models seemed confusing because I associated open
 * **Community development**: I also learned that companies can employ developers to work on open source projects. Businesses may contribute to open source because they depend on the software themselves, want to improve the technology they use, or want to help influence the future direction of a project.
 
 ## Part 3: Reflections & Takeaways
-* **What I Learned**
+## What I Learned
 The biggest lesson from this module is that open source is more than simply software that is free to download.
 
 It is an approach to software development and distribution that gives users access to source code and provides specific freedoms depending on the license. I learned that licensing determines what users can legally do with software.
 
 I also learned that different open source philosophies exist. Some licenses emphasize preserving software freedoms through copyleft, while others are more permissive and allow developers to use the software in proprietary products.
 
-* **How I Learned It**
+## How I Learned It
 I learned these concepts by studying the history of Linux and the development of the open source movement, alongside practicing with compiling code in the terminal.
 The examples involving Linux, UNIX, GPL, BSD, Creative Commons and open source businesses helped me connect the theoretical ideas to real-world software. Comparing different licenses was particularly useful because it showed me that "open source" does not mean every project has exactly the same rules.
 
-* **Challenges I Faced**
+## Challenges I Faced
 One of the main challenges was understanding the difference between:
 
 - Free software
@@ -188,7 +188,7 @@ One of the main challenges was understanding the difference between:
 
 Another challenge was understanding why different organizations have different philosophies about software freedom. The concept became easier once I separated price from freedom and focused on what the license actually permits users to do.
 
-* **Key Takeaways**
+## Key Takeaways
 Source code is the human-readable form of a program.
 
 Closed-source software normally keeps its source code private.
@@ -209,7 +209,7 @@ Open source businesses can make money through support, services, hardware, produ
 
 Standards such as POSIX help different systems work together.
 
-* **My Overall Understanding**
+## My Overall Understanding
 Before this module, I mainly thought of open source as software that people could download without paying. After studying the module, I understand that open source is fundamentally about access, permissions, collaboration and licensing.
 
 The most important thing I learned is to never assume that software being "open source" means I can do absolutely anything with it. I need to check the specific license because different licenses provide different rights and responsibilities.
