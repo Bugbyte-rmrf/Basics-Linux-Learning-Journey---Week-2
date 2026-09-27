@@ -13,9 +13,6 @@ This document is divided into three main sections to fulfill the assignment requ
 
 To understand the core difference between source code and machine code (and the difference between compiled and interpreted languages), I engaged in hands-on terminal exercises.
 
-![Screenshot: Compiling C and Interpreting Python in the Terminal](./assets/screenshot-hands-on.png)
-*(Note: Please view the assets folder for the screenshot showing the execution of the commands below.)*
-
 ### Commands Used & Explanations
 
 To test a compiled language, I used C:
@@ -106,9 +103,9 @@ The FSF promotes the idea that users should have the freedom to:
 
 - Modify software
 
-Distribute modified versions
+- Distribute modified versions
 
-Copyleft
+## Copyleft
 An important concept introduced in this section was copyleft.
 Copyleft is designed to make sure that the freedoms provided by a license continue to be available when software is modified and redistributed.
 
@@ -116,82 +113,82 @@ In simple terms: If you receive software with certain freedoms and distribute a 
 
 The GPL is a major example of a copyleft license.
 
-GPLv2 and GPLv3
+## GPLv2 and GPLv3
 I also learned that different versions of licenses can address different issues.
 The module used the example of TiVoization, where hardware could prevent users from running modified versions of software even though the source code was available. This helped me understand that software freedom can involve more than simply providing source code. The practical ability to modify and use the software can also become an important licensing issue.
 
-4.2.2 Open Source Initiative
+## 4.2.2 Open Source Initiative
 The Open Source Initiative (OSI) was founded in 1998 by Bruce Perens and Eric Raymond.
 The OSI promotes the concept of open source software and maintains a list of licenses that meet its open source definition. One important difference I learned is that not all open source licenses require modified software to remain under the same license.
 
-Permissive licenses
+## Permissive licenses
 Licenses such as the BSD and MIT licenses are examples of permissive open source licenses.
 They generally provide developers with considerable freedom to use, modify and redistribute the software, subject to the license conditions. For example, permissively licensed code can generally be incorporated into a larger proprietary product while following the requirements of the license. This is different from the stronger copyleft requirements associated with licenses such as the GPL.
 
-FOSS and FLOSS
+## FOSS and FLOSS
 The module explained that the terms Free and Open Source Software (FOSS) and Free/Libre/Open Source Software (FLOSS) are commonly used to bring these ideas together. The word "libre" helps distinguish freedom from the idea of something simply being free of charge.
 
-4.2.3 Creative Commons
+## 4.2.3 Creative Commons
 I learned that software licenses are not always appropriate for other types of creative work. For example, someone creating a photograph, article, illustration or educational resource may want to allow others to use their work while placing certain conditions on that use.
 This is where Creative Commons (CC) licenses are useful.
 
 Main Creative Commons conditions
-BY — Attribution: The creator must be credited.
+* **BY — Attribution**: The creator must be credited.
 
-SA — ShareAlike: Modified versions must generally be shared under the same licensing terms.
+* **SA — ShareAlike**: Modified versions must generally be shared under the same licensing terms.
 
-NC — NonCommercial: The work cannot be used commercially under that license.
+* **NC — NonCommercial**: The work cannot be used commercially under that license.
 
-ND — NoDerivatives: The original work can be shared, but modified versions cannot be distributed under that license.
+* **ND — NoDerivatives**: The original work can be shared, but modified versions cannot be distributed under that license.
 
 These conditions can be combined to create different Creative Commons licenses. Examples include CC BY, CC BY-SA, CC BY-ND, CC BY-NC, CC BY-NC-SA, and CC BY-NC-ND. There is also CC0, which is intended to place a work as close to the public domain as legally possible.
 
-What I learned from Creative Commons
+## What I learned from Creative Commons
 The important lesson for me is that "open" does not always mean that everything can be done with a work. The license tells me exactly what permissions and restrictions apply.
 
-4.3 Open Source Business Models
+## 4.3 Open Source Business Models
 At first, open source business models seemed confusing because I associated open source with software being free of charge. The module clarified that companies can make money from open source software.
 
-The key idea is: Open source describes how software can be used, studied, modified or distributed. It does not automatically mean that a company cannot charge money.
+* **The key idea is**: Open source describes how software can be used, studied, modified or distributed. It does not automatically mean that a company cannot charge money.
 
-Support and services: One business model is to provide paid support, maintenance, warranties or enterprise services around open source software. Companies can distribute software while charging customers for professional services.
+* **Support and services**: One business model is to provide paid support, maintenance, warranties or enterprise services around open source software. Companies can distribute software while charging customers for professional services.
 
-Hardware: Another model is to use open source software as part of a physical product. For example, a company can build hardware around Linux and sell the complete device. Examples include network equipment, security cameras, entertainment systems, and embedded devices.
+* **Hardware**: Another model is to use open source software as part of a physical product. For example, a company can build hardware around Linux and sell the complete device. Examples include network equipment, security cameras, entertainment systems, and embedded devices.
 
-Commercial products and services: Companies can also build additional tools, platforms or services around open source projects. This allows businesses to create value without necessarily keeping the underlying software completely closed.
+* **Commercial products and services**: Companies can also build additional tools, platforms or services around open source projects. This allows businesses to create value without necessarily keeping the underlying software completely closed.
 
-Community development: I also learned that companies can employ developers to work on open source projects. Businesses may contribute to open source because they depend on the software themselves, want to improve the technology they use, or want to help influence the future direction of a project.
+* **Community development**: I also learned that companies can employ developers to work on open source projects. Businesses may contribute to open source because they depend on the software themselves, want to improve the technology they use, or want to help influence the future direction of a project.
 
-🎯 Part 3: Reflections & Takeaways
-What I Learned
+## Part 3: Reflections & Takeaways
+* **What I Learned**
 The biggest lesson from this module is that open source is more than simply software that is free to download.
 
 It is an approach to software development and distribution that gives users access to source code and provides specific freedoms depending on the license. I learned that licensing determines what users can legally do with software.
 
 I also learned that different open source philosophies exist. Some licenses emphasize preserving software freedoms through copyleft, while others are more permissive and allow developers to use the software in proprietary products.
 
-How I Learned It
+* **How I Learned It**
 I learned these concepts by studying the history of Linux and the development of the open source movement, alongside practicing with compiling code in the terminal.
 The examples involving Linux, UNIX, GPL, BSD, Creative Commons and open source businesses helped me connect the theoretical ideas to real-world software. Comparing different licenses was particularly useful because it showed me that "open source" does not mean every project has exactly the same rules.
 
-Challenges I Faced
+* **Challenges I Faced**
 One of the main challenges was understanding the difference between:
 
-Free software
+- Free software
 
-Free-of-charge software
+- Free-of-charge software
 
-Open source software
+- Open source software
 
-Closed-source software
+- Closed-source software
 
-Copyleft licenses
+- Copyleft licenses
 
-Permissive licenses
+- Permissive licenses
 
 Another challenge was understanding why different organizations have different philosophies about software freedom. The concept became easier once I separated price from freedom and focused on what the license actually permits users to do.
 
-Key Takeaways
+* **Key Takeaways**
 Source code is the human-readable form of a program.
 
 Closed-source software normally keeps its source code private.
@@ -212,7 +209,7 @@ Open source businesses can make money through support, services, hardware, produ
 
 Standards such as POSIX help different systems work together.
 
-My Overall Understanding
+* **My Overall Understanding**
 Before this module, I mainly thought of open source as software that people could download without paying. After studying the module, I understand that open source is fundamentally about access, permissions, collaboration and licensing.
 
 The most important thing I learned is to never assume that software being "open source" means I can do absolutely anything with it. I need to check the specific license because different licenses provide different rights and responsibilities.
