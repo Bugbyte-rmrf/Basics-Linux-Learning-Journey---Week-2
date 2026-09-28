@@ -30,14 +30,6 @@ What it does: Opens the nano text editor in the terminal to create and write a b
 ```
 What it does: Executes the newly compiled machine code binary directly in the Linux environment.
 
-To test an interpreted language, I used Python:
-
-```bash
-python3 script.py
-
-```
-What it does: Runs a Python script. Unlike C, Python does not need to be compiled into a standalone binary first. Instead, an interpreter program processes and executes the human-readable code line-by-line on the fly.
-
 ## Part 2: Course Concepts & Details
 ## 4.1 Introduction
 This module introduced me to the relationship between Linux and open source software. I learned that software is normally created as source code, which is written in a programming language that humans can understand. A compiler can then translate the source code into machine instructions, producing a binary or executable program that a computer can run.
