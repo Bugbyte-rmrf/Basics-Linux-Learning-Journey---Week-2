@@ -23,13 +23,6 @@ nano program.c
 ```
 What it does: Opens the nano text editor in the terminal to create and write a basic C program. This represents writing source code—the human-readable set of instructions.
 
-```bash
-gcc program.c -o program
-
-```
-What it does: A computer's processor cannot directly understand human-readable C code. I used gcc (the GNU Compiler Collection) to translate program.c into machine code (a binary executable). The -o flag names the output file program.
-
-The process: Source Code → Compiler → Machine Code/Binary.
 
 ```bash
 ./program
