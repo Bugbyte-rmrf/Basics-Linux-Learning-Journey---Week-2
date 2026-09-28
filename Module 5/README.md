@@ -9,6 +9,9 @@ This document is divided into three main sections to fulfill the assignment requ
 
 ---
 
+## 5.1 - The Linux Command Line
+
+
 ## Part 1: Hands-on Work & Terminal Execution
 
 To truly understand how Bash interprets commands, I practiced extensively in the terminal. Below are the commands I used to explore command structure, variables, aliases, and control operators.
