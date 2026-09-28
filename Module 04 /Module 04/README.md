@@ -58,7 +58,7 @@ Linux was influenced by UNIX and adopted many of its concepts and design princip
 
 ## Standards
 I learned that standards are important because they allow different software and operating systems to communicate and work together.
-Organizations such as IEEE and POSIX help establish standards that improve compatibility between systems.
+Organizations such as IEEE (Institute of Electrical and Electronics Engineers) and POSIX (Portable Operating System Interface),help establish standards that improve compatibility between systems.
 This means that software designed according to common standards can be easier to move from one operating system or environment to another.
 
 ## 4.2 Open Source Licensing
@@ -66,21 +66,21 @@ One of the most important concepts I learned in this module is that ownership, p
 
 When we talk about software, we need to ask three separate questions:
 
-1. Who owns the intellectual property?
+1. Ownership - Who owns the intellectual property behind the software?
 
-2. Does the user have to pay?
+2. Money Transfer - How does money change hands, if at all?
 
-3. What is the user legally allowed to do with the software?
+3. Licensing - What do you get? What can you do with the software? Can you use it on only one computer? Can you give it to someone else?
 
 Open source does not necessarily mean that software costs nothing. The word "free" in free software mainly refers to freedom, not price. A license determines what users are allowed to do with software.
 
 ## Closed-source example
-Microsoft Windows is an example of traditionally closed-source software. The company controls the source code and normally distributes compiled versions of the software. Users receive a license that defines how they may use the software.
+Microsoft Windows is an example of traditionally closed-source software. The company controls the source code and normally distributes compiled versions of the software. Users receive a license, End User License Agreement (EULA), that they must click through, indicating acceptance, in order to install the software.
 
 ## Open-source example
 Linux is distributed under the GNU General Public License version 2 (GPLv2).
 The GPL allows people to access and modify the source code. When modified versions are distributed under the relevant GPL requirements, the license helps preserve the ability of others to access and modify the software as well.
-This taught me that an open source license is not simply permission to look at the code. It also defines what people can do with that code.
+This taught me that an open source license provides permission to look at the code and defines what people can do with that code.
 
 ## 4.2.1 Free Software Foundation
 The Free Software Foundation (FSF) was founded by Richard Stallman in 1985. I learned that the FSF uses the word "free" to mean freedom rather than zero cost.
@@ -99,7 +99,7 @@ The FSF promotes the idea that users should have the freedom to:
 An important concept introduced in this section was copyleft.
 Copyleft is designed to make sure that the freedoms provided by a license continue to be available when software is modified and redistributed.
 
-In simple terms: If you receive software with certain freedoms and distribute a modified version under a copyleft license, you may have to preserve those freedoms for the next users.
+*In simple terms*: If you receive software with certain freedoms and distribute a modified version under a copyleft license, you may have to preserve those freedoms for the next users.
 
 The GPL is a major example of a copyleft license.
 
@@ -112,7 +112,7 @@ The Open Source Initiative (OSI) was founded in 1998 by Bruce Perens and Eric Ra
 The OSI promotes the concept of open source software and maintains a list of licenses that meet its open source definition. One important difference I learned is that not all open source licenses require modified software to remain under the same license.
 
 ## Permissive licenses
-Licenses such as the BSD and MIT licenses are examples of permissive open source licenses.
+Licenses such as the BSD (Berkeley Software Distribution) and Massachusetts Institute of Technology (MIT) licenses are examples of permissive open source licenses.
 They generally provide developers with considerable freedom to use, modify and redistribute the software, subject to the license conditions. For example, permissively licensed code can generally be incorporated into a larger proprietary product while following the requirements of the license. This is different from the stronger copyleft requirements associated with licenses such as the GPL.
 
 ## FOSS and FLOSS
@@ -127,11 +127,24 @@ Main Creative Commons conditions:
 
 * **SA — ShareAlike**: Modified versions must generally be shared under the same licensing terms.
 
-* **NC — NonCommercial**: The work cannot be used commercially under that license.
+* **NC — NonCommercial**: The modified versions work cannot be used commercially under that license.
 
 * **ND — NoDerivatives**: The original work can be shared, but modified versions cannot be distributed under that license.
 
-These conditions can be combined to create different Creative Commons licenses. Examples include CC BY, CC BY-SA, CC BY-ND, CC BY-NC, CC BY-NC-SA, and CC BY-NC-ND. There is also CC0, which is intended to place a work as close to the public domain as legally possible.
+These conditions can be combined to create different Creative Commons licenses. Examples include:
+* **CC BY - Attribution**: One can use CC BY content for any use but must credit the copyright holder.
+  
+* **CC BY-SA - Attribution ShareAlike**: Derived works must be shared under the same license, much like in the Free Software ideals.
+  
+* **CC BY-ND - Attribution NoDerivs**: One may redistribute the content under the same conditions as CC-BY but may not change it.
+
+* **CC BY-NC - Attribution-NonCommercial**: Just like CC BY, but one may not use it for commercial purposes.
+  
+* **CC BY-NC-SA - Attribution-NonCommercial-ShareAlike**: Builds on the CC BY-NC license but requires that any changes be shared under the same license.
+  
+* **CC BY-NC-ND - Attribution-NonCommercial-NoDerivs**: One can share the content to be used for non-commercial purposes, but people may not change the content.
+
+* **CC0 - No Rights Reserved**: Intended to place a work as close to the public domain as legally possible.
 
 ## What I learned from Creative Commons
 The important lesson for me is that "open" does not always mean that everything can be done with a work. The license tells me exactly what permissions and restrictions apply.
@@ -139,7 +152,7 @@ The important lesson for me is that "open" does not always mean that everything 
 ## 4.3 Open Source Business Models
 At first, open source business models seemed confusing because I associated open source with software being free of charge. The module clarified that companies can make money from open source software.
 
-* **The key idea is**: Open source describes how software can be used, studied, modified or distributed. It does not automatically mean that a company cannot charge money.
+* **The key idea is**: Open source describes how software can be used, studied, modified oistributed. It does not automatically mean that a company cannot charge money.
 
 * **Support and services**: One business model is to provide paid support, maintenance, warranties or enterprise services around open source software. Companies can distribute software while charging customers for professional services.
 
