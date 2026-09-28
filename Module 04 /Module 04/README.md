@@ -21,14 +21,19 @@ To test a compiled language, I used C:
 nano program.c
 
 ```
-What it does: Opens the nano text editor in the terminal to create and write a basic C program. This represents writing source code—the human-readable set of instructions.
+<img width="713" height="499" alt="Results - Nano" src="https://github.com/user-attachments/assets/af76ade1-c962-4328-91f3-f445c78f1986" />
+
+*What it does*: Opens the nano text editor in the terminal to create and write a basic C program. This represents writing source code—the human-readable set of instructions.
 
 
 ```bash
 ./program
 
 ```
-What it does: Executes the newly compiled machine code binary directly in the Linux environment.
+
+<img width="521" height="89" alt="Nano   Program" src="https://github.com/user-attachments/assets/0676e9d2-e615-441e-89b7-ba1a16807071" />
+
+*What it does*: Executes the newly compiled machine code binary directly in the Linux environment.
 
 ## Part 2: Course Concepts & Details
 ## 4.1 Introduction
