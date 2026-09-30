@@ -9,65 +9,24 @@ This document is divided into three main sections to fulfill the assignment requ
 
 ---
 
-## 5.1 - The Linux Command Line
+## Hands-on Work & Concept Breakdown
 
+## 5.1 - The Command Line Interface (CLI)
+The CLI allows a user to interact with Linux by typing commands instead of relying on a graphical interface.I learned that the important thing is not to memorize everything immediately, but to understand the structure and logic behind commands.
 
-## Part 1: Hands-on Work & Terminal Execution
+The basic structure I learned was:
+`command [options] [arguments]`  
 
-To truly understand how Bash interprets commands, I practiced extensively in the terminal. Below are the commands I used to explore command structure, variables, aliases, and control operators.
-
-### Commands Used & Explanations
-
-**1. Exploring Command Structure (Options & Arguments)**
+For example:
 ```bash
-ls -lh /home
+ls -l /home
 ```
+Here:
+- ls = command. Tell Linux what to do.
+- -l = option. Modify how the command behaves.
+- /home = argument. Tell the command what to operate on.
 
-What it does: Lists the contents of the `/home`directory in a long ( `-l `) and human-readable (`-h`) format.
-
-Breakdown: `ls` is the command, `-lh`are the combined options, and `/home` is the argument.
-
-**2. Working with Variables and the Environment**
-```bash
-variable1='Something'
-export variable1
-echo $variable1
-```
-
-What it does: Creates a local variable named `variable1`, turns it into an environment variable using `export`, and prints its value to the screen using `echo`.
-
-**3. Checking the PATH**
-```bash
-echo $PATH
-```
-What it does: Displays the directories that Bash searches to find executable commands, separated by colons.
-
-**4. Identifying Command Types**
-```bash
-type -a echo
-which cal
-```
-
-What it does: `type -a` shows all locations and types of the `echo` command (revealing if it is a built-in or external executable). `which cal` searches the `$PATH` to find the exact location of the `cal` executable.
-
-**5. Using Control Statements and Quoting**
-```Bash
-ls /etc/ppp && echo "Success! Today is $(date)"
-```
-
-What it does: Uses the `&&` (Logical AND) operator to check if `/etc/ppp` exists. If the `ls` command succeeds, it runs the `echo` command. The backticks (```) execute the `date` command and substitute its output into the sentence before printing it.
-
----  
-
-## Part 2: Course Concepts & Details  
-### 5.1 Introduction
-Understanding the CLI A Command Line Interface (CLI) is an interface where you interact with the operating system by typing commands instead of relying on graphical menus (Click → Open folder → Select file). 
-
-For example, `ls` asks Linux to list the contents of the current directory.  
-
-The module makes an important point: You don't need to memorize everything at once. What matters first is learning the structure: `command [options] [arguments]`. 
-
-Once you understand this pattern, learning individual commands becomes much easier.  
+I learned is that the CLI works similarly across different Linux distributions. Although graphical interfaces may look different, many of the same commands work across Linux systems.
 
 Advantages of the CLI: 
 - **Precision**: Exact, detailed control over the system.
@@ -75,56 +34,111 @@ Advantages of the CLI:
 - **Automation**: Commands can be placed inside scripts so repetitive tasks happen automatically. 
 - **Portability**: Graphical interfaces vary wildly between distributions (Ubuntu vs. Fedora vs. Debian), but CLI commands generally remain the same. Learning the CLI gives you a transferable skill.
 
-### 5.2 Terminal vs. Shell 
-They are not exactly the same thing. The process looks like this: You → Terminal → Shell → Operating System → Action → Output  
-* Terminal: The application/interface through which you interact.
-* Shell: The program that interprets what you type and determines what needs to happen. 
-* Bash: The most commonly used Linux shell. Features include command history, inline editing, scripting, aliases, variables, and functions.  The Bash Prompt When Bash is ready, you see a prompt: `sysadmin@localhost:~$`
-- `sysadmin`: Username
-- `localhost`: System/hostname
-- `~`: Current directory (the tilde is shorthand for the user's home directory, e.g., `/home/sysadmin`)
-- `$`: Indicates a normal, non-root user shell prompt.
+## 5.2 - The Terminal vs Shell
+* Terminal: The application/interface through which an individual interact.
+The shell is the program that interprets commands typed into the terminal.
+Linux supports several different shells, for this module, i focused on Bash
+Bash stands for Bourne Again SHell.
+I learned that Bash provides several useful features:
+- Command history
+- Command editing
+- Variables
+- Aliases
+- Functions
+- Scripting
 
-### 5.3 The Command Structure 
-A command is a program or shell instruction that performs an action. The basic structure is: > `command [options] [arguments]`  
+## 5.3 - Understanding the Linux Prompt
+When I opened the terminal, I saw a prompt similar to:
+```bash
+sysadmin@localhost:~$
+```
+- sysadmin: This is the username of the current user.
+- localhost: This identifies the computer/system.
+- ~ : The tilde represents the user's home directory.
+- $ : This indicates that the shell is ready to accept a command as a normal user.
 
-#### 5.3.1 Arguments 
-An argument tells the command what it should act on. 
+## 5.4 - Commands
+A command is a program or instruction that tells Linux to perform an action.A command is a program or shell instruction that performs an action. The basic structure is: > 
 
-* Example: `ls /etc/ppp`. (`ls` is the command, `/etc/ppp` is the argument). You can provide multiple arguments: `ls /etc/ppp /etc/ssh`.  
 
-#### 5.3.2 Options 
-An option changes or extends the behavior of a command.
+```bash
+ls 
+```
+This command displays the files and directories in the current directory.
 
-* Example: `ls -l` gives a long listing containing permissions, ownership, size, and date. 
+## 5.5 - Arguments
+An argument tells the command what it should act on. It gives a command additional information.
 
-* Example: `ls -r` reverses the alphabetical order.
+```bash
+ls /etc/ppp
+```
+`ls` is the command, `/etc/ppp` is the argument). The command means: List the contents of /etc/ppp.
 
-* Combining: You can combine single-letter options: `ls -l -r`, `ls -rl`, and `ls -lr` all do the same thing.
+I learned that arguments are essentially the targets or additional information that a command needs.
 
-* Short vs Long Options: Short options use one dash (`-h`). Long options use two dashes (`--human-readable`).
+## 5.6 - Options
+An option changes or extends the behavior of a command. They modify how a command behaves.
 
-* Case Sensitivity: Linux is strictly case-sensitive. `ls` is not `LS`, and `File.txt` is not `file.txt`.  
+```bash
+ls -lr
+```
+The `-r `option produces reverses the order. Therefore, the command provides a long listing but in reverse order. These are equivalent:
 
-#### 5.3.3 Command History 
+```bash
+ls -l -r
+ls -lr
+ls -rl
+```
+## 5.6 - Human-Readable File Sizes
+I also learned that file sizes can be easier to understand
 
-Bash remembers previously executed commands, reducing typing and mistakes.  
+```bash
+ls -lh /usr/bin/perl
+```
+The `-h` option means human-readable.
 
-* Editing Keys: `↑`(Previous), `↓` (Next), `←/→` (Move cursor), `Home` (Beginning of line), `End` (End of line), `Backspace/Delete` (Delete text).
-* `history`: Displays your command history with numbers.
-* `!3`: Executes command number 3 from history.
-* `!!`: Executes the most recent command again.
-* `!-3`: Executes the command from three positions back.
-* `!ls`: Finds and executes the most recent ls command.
+## 5.7 - Linux Is Case-Sensitive
+Linux distinguishes between uppercase and lowercase characters.
+`ls` is different from `LS` .When using Linux, commands, filenames, variables and options must be typed correctly.
 
-### 5.4 Variables 
+## 5.8 - Command History
+Bash keeps a history of commands that I have previously executed.Command history is particularly useful when working with long commands or commands that I frequently repeat.
 
-A variable is a named place where information can be stored (like a labeled box).  
+```bash
+history
+```
+It displays command history with numbers.
 
-* Create: `variable1='Something'`
-* Read: Use `$` before the name (`echo $variable1`). `variable1` means the name; `$variable1` means the stored value.
+If a command has number 3, I learnt to run:
 
-#### 5.4.1 Local vs. 5.4.2 Environment Variables
+```bash
+!3
+```
+
+For the most recent command:
+```bash
+!!
+```
+
+## 5.8 - Variables - Local and Environment Variables
+A variable is a named piece of information stored by the shell.
+A local variable exists within the current shell.
+Environment variables are variables that are available to processes started from the shell.
+
+```bash
+variable1='Something'
+export variable1
+echo $variable1
+```
+
+What it does: Creates a local variable named `variable1`, turns it into an environment variable using `export`, and prints its value to the screen using `echo`.
+A local variable can be exported. After exporting it, it becomes an environment variable. To check environment variables: 
+
+```bash
+env
+```
+
+#### Differences Between Local vs. Environment Variables
 *Scope*: 
 - Local Variable: Exists only in current shell.
 - Environment Variable: Available to the environment and child processes
@@ -137,37 +151,98 @@ A variable is a named place where information can be stored (like a labeled box)
  - Local Variable: `variable='text'`
  - Environment Variable: Created or converted using the `export` command
 
-#### 5.4.3 The PATH Variable
+## 5.8 - The PATH Variable
+I learned that `PATH` tells Bash where to look for executable commands.
 
-`PATH` tells Bash where to search for executable commands (e.g., `/home/sysadmin/bin:/usr/local/bin:/usr/bin:/bin`). Bash searches these colon-separated directories in order. If it can't find a command, it returns `command not found`.
+```bash
+echo $PATH
+```
+What it does: Displays the directories that Bash searches to find executable commands, separated by colons.
 
-Critical Lesson: When adding to PATH, preserve the existing directories:`PATH=/usr/bin/custom:$PATH` If you forget the :`$PATH`, you will overwrite and lose all your standard command locations!
+## 5.8 -  Command Types
+I learned that commands can come from different places.
+The major types discussed were:
+1. Built-in commands. Built-in commands are part of the shell itself. For example: `cd` is a Bash built-in command.
+   
+3. External commands. External commands are programs stored somewhere on the filesystem.For example: `type ls` determine what Bash considers `ls`to be.
+   
+5. Aliases. An alias is essentially a shortcut.For example: `alias mycal="cal 2019"`. I learnt that aliases created directly in the current shell normally disappear when that shell closes unless they are placed in a shell initialization file.
+   
+7. Functions. A function can execute several commands.
+The type command helps identify what something is.
 
-### 5.5 Command Types
-Bash can encounter several types of commands:
-* Internal/built-in commands: Built directly into the shell (e.g., `cd`). Check with `type cd`.
-* External commands: Separate executables in the filesystem. Check with `which ls`.
-* Aliases: Shorter/alternative names for commands (e.g., `alias ll='ls -alF'`).Temporary unless saved.
-* Functions: Reusable groups of commands under one name. (e.g., `my_report () { ls Documents; date; }`).
-*(Tip: `type -a echo` will show all available versions of a command, prioritizing built-ins over external programs)*
+```bash
+my_report () {
+    ls Documents
+    date
+    echo "Document directory report"
+}
+my_report
+```
+Functions are useful when one wants to group multiple commands into one reusable operation.
 
-### 5.6 Quoting
+## 5.9 - Quoting
+Quoting tells Bash to treat them as ordinary text.
 
-Bash gives special meanings to certain characters (`$, *, ?, [, ], `). Quoting tells Bash to treat them as ordinary text.
-* Double Quotes (`" "`): Protects most special characters, but allows variable substitution (e.g., `echo "The path is $PATH"` will print the actual path).
-* Single Quotes (`' '`): Strongest protection. Treats everything inside as literal text (e.g., `echo 'Costs $100'` will not treat $100 as a variable).
-* Backslash (`\`): Protects the single character immediately following it (e.g., \$).
-* Backticks (`` ``): Allows command substitution. The output of one command becomes part of another. (e.g., `echo Today is` date``. A more modern syntax is `echo "Today is $(date)"`).
+The three main quoting mechanisms introduced were:
+- " : double quotes. Double quotes prevent some special characters from being interpreted normally.
 
-### 5.7 Control Statements
-Control statements allow you to chain commands together based on their success or failure.
-* Semicolon (`;`): Run the next command regardless of the first command's result.`ls /etc/ppp; echo "Hello"Double`
-* Ampersand (`&&`): Run the next command ONLY IF the first succeeds.`ls /etc/ppp && echo "success"`
-* Double Pipe (`||`): Run the next command ONLY IF the first fails.`ls /etc/junk || echo "failed"`
+```bash
+echo "The path is $PATH"
+```
+ The above command will display the actual value of `PATH`.
+
+- ': single quotes. Single quotes tell Bash, treat everything inside these quotes literally.
+
+```bash
+echo 'The car costs $100'
+```
+The above command will display: The car costs $100
+
+- /: backslash. A backslash can prevent Bash from interpreting a particular character.It also protects the single character immediately following it (e.g., \$).
+
+```bash
+echo The service costs \$1 and the path is $PATH
+```
+The above command will display:The service costs $1 and the path is /usr/bin:...
+
+- `: backquotes. Backquotes can be used for command substitution.Command substitution allows the output of one command to become part of another command.
+
+```bash
+echo Today is `date`
+```
+I learnt that Bash runs the `date` command first and inserts its output. The results are Today is Mon Nov 4 03:40:04 UTC 2018
+
+## 5.9 - Control Statements
+Control statements allow commands to be combined and controlled based on whether previous commands succeed or fail.
+
+
+The three important operators I learned were:
+- ; : Semicolon.A semicolon runs commands one after another.Each command runs independently.
+
+```bash
+cal 1 2030; cal 2 2030; cal 3 2030
+```
+This displays January, February and March.Even if one command fails, it continues to the next command.
+
+
+- && : Double Ampersand. The operator means run the second command only if the first command succeeds.
+  
+```bash
+ls /etc/ppp && echo success
+```
+If `/etc/ppp` exists, the second command runs `success`.
+
+- ||: Double Pipe. The operator means run the second command only if the first command fails.
+
+```bash
+ls /etc/junk || echo failed
+```
+If the directory doesn't exist, the second command runs failed.
 
 ---
 
-Part 3: Reflections & Takeaways
+## Part 2: Reflections & Takeaways
 ## What I Learned
 The most important thing I learned is that Linux commands are not random pieces of text. They follow a strict structure, and Bash follows rules for interpreting them. 
 
