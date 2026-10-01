@@ -39,7 +39,7 @@ I learned is that the CLI works similarly across different Linux distributions. 
 ### 5.2 - The Terminal vs Shell
 *Terminal*: The application/interface through which an individual interact.
 
-The *Shell* is the program that interprets commands typed into the terminal. Linux supports several different shells, for this module, I focused on **Bash** (Bourne Again SHell).
+The *Shell* is the program that interprets commands typed into the terminal. Linux supports several different shells, for this module, I focused on **Bash (Bourne Again SHell)**.
 
 I learned that Bash provides several useful features:
 - Command history
@@ -101,9 +101,9 @@ ls -rl
 ### 5.7 - Human-Readable File Sizes
 I also learned that file sizes can be easier to understand
 
-```bash
-ls -lh /usr/bin/perl
-```
+For example: `ls -lh /usr/bin/perl`
+
+<img width="513" height="33" alt="ls -lh" src="https://github.com/user-attachments/assets/f7c21bc4-a0b1-40f7-ae20-78dde210fd38" />
 
 The `-h` option means human-readable.
 
@@ -143,33 +143,33 @@ A local variable can be exported. After exporting it, it becomes an environment 
 - Local Variable: Exists only in current shell.
 - Environment Variable: Available to the environment and child processes
   
-*Lifespan*:
+*2. Lifespan*:
 - Local Variable: Temporary (lost when shell exits)
 - Environment Variable: Environment is established for new shells
   
-*Creation*:
+*3. Creation*:
  - Local Variable: `variable='text'`
  - Environment Variable: Created or converted using the `export` command
 
-## 5.8 - The PATH Variable
+### 5.11 - The PATH Variable
 I learned that `PATH` tells Bash where to look for executable commands.
 
-```bash
-echo $PATH
-```
+For example: `echo $PATH`
+
+<img width="504" height="47" alt="echo path" src="https://github.com/user-attachments/assets/c69c3126-16a3-47cd-98ae-97be9b308b2c" />
+
 What it does: Displays the directories that Bash searches to find executable commands, separated by colons.
 
-## 5.8 -  Command Types
+### 5.12 -  Command Types
 I learned that commands can come from different places.
 The major types discussed were:
-1. Built-in commands. Built-in commands are part of the shell itself. For example: `cd` is a Bash built-in command.
+1. *Built-in commands*. Built-in commands are part of the shell itself. For example: `cd` is a Bash built-in command.
    
-3. External commands. External commands are programs stored somewhere on the filesystem.For example: `type ls` determine what Bash considers `ls`to be.
+2. *External commands*. External commands are programs stored somewhere on the filesystem.For example: `type ls` determine what Bash considers `ls`to be.
    
-5. Aliases. An alias is essentially a shortcut.For example: `alias mycal="cal 2019"`. I learnt that aliases created directly in the current shell normally disappear when that shell closes unless they are placed in a shell initialization file.
+3. *Aliases*. An alias is essentially a shortcut.They are created directly in the current shell normally disappear when that shell closes unless they are placed in a shell initialization file.
    
-7. Functions. A function can execute several commands.
-The type command helps identify what something is.
+4. *Functions*. A function can execute several commands.
 
 ```bash
 my_report () {
@@ -179,72 +179,80 @@ my_report () {
 }
 my_report
 ```
+<img width="508" height="197" alt="Functions" src="https://github.com/user-attachments/assets/10153cad-0c3b-4f31-8468-1867e21bd303" />
+
 Functions are useful when one wants to group multiple commands into one reusable operation.
 
-## 5.9 - Quoting
+### 5.13 - Quoting
 Quoting tells Bash to treat them as ordinary text.
 
 The three main quoting mechanisms introduced were:
-- " : double quotes. Double quotes prevent some special characters from being interpreted normally.
+1. `"` : double quotes. Double quotes prevent some special characters from being interpreted normally.
 
-```bash
-echo "The path is $PATH"
-```
+For example: `echo "The path is $PATH"`
+
+<img width="510" height="45" alt="Double Quotes" src="https://github.com/user-attachments/assets/3ab03ac0-9a0f-43f9-93e0-95930bfc866f" />
+
  The above command will display the actual value of `PATH`.
 
-- ': single quotes. Single quotes tell Bash, treat everything inside these quotes literally.
+2. `'`: single quotes. Single quotes tell Bash, treat everything inside these quotes literally.
 
-```bash
-echo 'The car costs $100'
-```
+For example: `echo 'The car costs $100'`
+
+<img width="509" height="32" alt="Single Quotes" src="https://github.com/user-attachments/assets/41982b17-2658-4fcb-9dca-33e55c3a21f3" />
+
 The above command will display: The car costs $100
 
-- /: backslash. A backslash can prevent Bash from interpreting a particular character.It also protects the single character immediately following it (e.g., \$).
+3. `/`: backslash. A backslash can prevent Bash from interpreting a particular character.It also protects the single character immediately following it (e.g., \$).
 
-```bash
-echo The service costs \$1 and the path is $PATH
-```
+For example: `echo The service costs \$1 and the path is $PATH`
+
+<img width="510" height="46" alt="Backslash" src="https://github.com/user-attachments/assets/254ec297-180b-4a65-a42d-80157f7f04ab" />
+
 The above command will display:The service costs $1 and the path is /usr/bin:...
 
-- `: backquotes. Backquotes can be used for command substitution.Command substitution allows the output of one command to become part of another command.
+- ```: backquotes. Backquotes can be used for command substitution.Command substitution allows the output of one command to become part of another command.
 
-```bash
-echo Today is `date`
-```
-I learnt that Bash runs the `date` command first and inserts its output. The results are Today is Mon Nov 4 03:40:04 UTC 2018
+For example: `echo Today is `date``
 
-## 5.9 - Control Statements
+<img width="512" height="32" alt="Single slash" src="https://github.com/user-attachments/assets/118fbd50-7483-4565-9198-d6da46a176c3" />
+
+I learnt that Bash runs the `date` command first and inserts its output. The results are Today's date. 
+
+### 5.14 - Control Statements
 Control statements allow commands to be combined and controlled based on whether previous commands succeed or fail.
 
-
 The three important operators I learned were:
-- ; : Semicolon.A semicolon runs commands one after another.Each command runs independently.
+1 `;` : Semicolon.A semicolon runs commands one after another.Each command runs independently.
 
-```bash
-cal 1 2030; cal 2 2030; cal 3 2030
-```
+For example: `cal 1 2030; cal 2 2030`
+
+<img width="496" height="240" alt="Cal " src="https://github.com/user-attachments/assets/a4a288bc-53e7-4178-9b98-6384460220b0" />
+
 This displays January, February and March.Even if one command fails, it continues to the next command.
 
-
-- && : Double Ampersand. The operator means run the second command only if the first command succeeds.
+- `&&` : Double Ampersand. The operator means run the second command only if the first command succeeds.
   
-```bash
-ls /etc/ppp && echo success
-```
-If `/etc/ppp` exists, the second command runs `success`.
+For example: `ls /etc/ppp && echo success`
 
-- ||: Double Pipe. The operator means run the second command only if the first command fails.
+<img width="497" height="53" alt="Ampersand" src="https://github.com/user-attachments/assets/85b7b3a1-4e5e-4e17-906b-62ab7b8d3818" />
 
-```bash
-ls /etc/junk || echo failed
-```
+If `/etc/ppp` exists, the second command runs success.
+
+- `||`: Double Pipe. The operator means run the second command only if the first command fails.
+
+For example: `ls /etc/junk || echo failed`
+
+<img width="497" height="48" alt="echo failed" src="https://github.com/user-attachments/assets/ad79926c-b31a-49fe-9d1a-378083f3e332" />
+
 If the directory doesn't exist, the second command runs failed.
 
 ---
 
-## Part 2: Reflections & Takeaways
-## What I Learned
-The most important thing I learned is that Linux commands are not random pieces of text. They follow a strict structure, and Bash follows rules for interpreting them. 
+### Part 2: Reflections & Takeaways
+
+### What I Learned
+I learned Linux commands  follow a strict structure, and Bash follows rules for interpreting them. 
 
 Simple commands can be layered with options, arguments, variables, and control operators to create highly sophisticated, automated workflows.
 
@@ -255,16 +263,19 @@ The module built my knowledge progressively through 8 distinct steps:
 2. Understand Bash: The shell interprets commands.
 3. Command Structure: `command [options] [arguments]`.
 4. Memory: How Bash remembers information (history, variables).
-5. Finding Commands: How Linux uses `$PATH`, `which`, and `type`.
+5. Finding Commands: How Linux uses `$PATH`.
 6. Shortcuts: How to use aliases and functions.
-7. Interpreting Text: How quoting works (`", ', \, ``).
-8. Combining Commands: Using control operators (`;, &&,`).  
+7. Interpreting Text: How quoting works (`"`,`'`,`\`, ```).
+8. Combining Commands: Using control operators (`;, ``&&``,``||`).  
 
-## Challenges I Faced 
-1. Remembering Syntax: Because Linux is case-sensitive, `ls -l` and `ls -L` are entirely different. The solution is not to panic and memorize, but to learn the patterns and use documentation.
+### Challenges I Faced 
+
+1. Remembering Syntax: Because Linux is case-sensitive, `ls -l` and `ls -L` are entirely different. The solution is to learn the patterns and use documentation.
 2. Understanding `$`: It was initially confusing that `$PATH` reads the variable, but `\$PATH` is literal text. Understanding quoting fixed this.
 3. Understanding PATH: It felt abstract until I realized it is simply a "search list" Bash uses when asking "Where is this command?".
+   
 ### Key Takeaways
+
 1. CLI: Controls Linux by typing commands.
 2. Shell: Interprets commands and communicates with the OS.
 3. Bash: The most commonly used Linux shell.
