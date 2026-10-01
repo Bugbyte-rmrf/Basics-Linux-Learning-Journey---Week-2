@@ -211,9 +211,9 @@ For example: `echo The service costs \$1 and the path is $PATH`
 
 The above command will display:The service costs $1 and the path is /usr/bin:...
 
-4.```: backquotes. Backquotes can be used for command substitution.Command substitution allows the output of one command to become part of another command.
+4. `: backquotes. Backquotes can be used for command substitution.Command substitution allows the output of one command to become part of another command.
 
-For example: ` echo Today is `date``
+For example: `echo Today is ``date`
 
 <img width="512" height="32" alt="Single slash" src="https://github.com/user-attachments/assets/118fbd50-7483-4565-9198-d6da46a176c3" />
 
@@ -229,7 +229,7 @@ For example: `cal 1 2030; cal 2 2030`
 
 <img width="496" height="240" alt="Cal " src="https://github.com/user-attachments/assets/a4a288bc-53e7-4178-9b98-6384460220b0" />
 
-This displays January, February and March.Even if one command fails, it continues to the next command.
+This displays January and February.Even if one command fails, it continues to the next command.
 
 - `&&` : Double Ampersand. The operator means run the second command only if the first command succeeds.
   
