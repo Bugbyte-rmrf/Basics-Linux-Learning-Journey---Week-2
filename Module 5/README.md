@@ -23,12 +23,12 @@ For example:
 ```bash
 ls -l /home
 ```
+<img width="493" height="49" alt="ls-l" src="https://github.com/user-attachments/assets/fb92a7ad-caef-47da-b4dc-d894cd452e2f" />
+
 Here:
 - ls = command. Tell Linux what to do.
 - -l = option. Modify how the command behaves.
 - /home = argument. Tell the command what to operate on.
-
-<img width="493" height="49" alt="ls-l" src="https://github.com/user-attachments/assets/fb92a7ad-caef-47da-b4dc-d894cd452e2f" />
 
 I learned is that the CLI works similarly across different Linux distributions. Although graphical interfaces may look different, many of the same commands work across Linux systems.
 
