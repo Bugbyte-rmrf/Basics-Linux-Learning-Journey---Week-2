@@ -265,8 +265,8 @@ The module built my knowledge progressively through 8 distinct steps:
 4. Memory: How Bash remembers information (history, variables).
 5. Finding Commands: How Linux uses `$PATH`.
 6. Shortcuts: How to use aliases and functions.
-7. Interpreting Text: How quoting works (`"`,`'`,`\`, ```).
-8. Combining Commands: Using control operators (`;, ``&&``,``||`).  
+7. Interpreting Text: How quoting works (`"`,`'`,`\`).
+8. Combining Commands: Using control operators (`;, &&, ||`).  
 
 ### Challenges I Faced 
 
