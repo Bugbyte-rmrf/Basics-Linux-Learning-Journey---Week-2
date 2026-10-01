@@ -9,9 +9,9 @@ This document is divided into three main sections to fulfill the assignment requ
 
 ---
 
-## Hands-on Work & Concept Breakdown
+### A. Hands-on Work & Concept Breakdown
 
-## 5.1 - The Command Line Interface (CLI)
+### 5.1 - The Command Line Interface (CLI)
 The CLI allows a user to interact with Linux by typing commands instead of relying on a graphical interface.I learned that the important thing is not to memorize everything immediately, but to understand the structure and logic behind commands.
 
 The basic structure I learned was:
@@ -26,19 +26,20 @@ Here:
 - -l = option. Modify how the command behaves.
 - /home = argument. Tell the command what to operate on.
 
+<img width="493" height="49" alt="ls-l" src="https://github.com/user-attachments/assets/fb92a7ad-caef-47da-b4dc-d894cd452e2f" />
+
 I learned is that the CLI works similarly across different Linux distributions. Although graphical interfaces may look different, many of the same commands work across Linux systems.
 
-Advantages of the CLI: 
-- **Precision**: Exact, detailed control over the system.
-- **Speed**: Experienced users accomplish tasks much faster by typing.
-- **Automation**: Commands can be placed inside scripts so repetitive tasks happen automatically. 
-- **Portability**: Graphical interfaces vary wildly between distributions (Ubuntu vs. Fedora vs. Debian), but CLI commands generally remain the same. Learning the CLI gives you a transferable skill.
+**Advantages of the CLI** 
+- *Precision*: Exact, detailed control over the system.
+- *Speed*: Experienced users accomplish tasks much faster by typing.
+- *Automation*: Commands can be placed inside scripts so repetitive tasks happen automatically. 
+- *Portability*: Graphical interfaces vary wildly between distributions (Ubuntu vs. Fedora vs. Debian), but CLI commands generally remain the same. Learning the CLI gives you a transferable skill.
 
-## 5.2 - The Terminal vs Shell
-* Terminal: The application/interface through which an individual interact.
-The shell is the program that interprets commands typed into the terminal.
-Linux supports several different shells, for this module, i focused on Bash
-Bash stands for Bourne Again SHell.
+### 5.2 - The Terminal vs Shell
+- *Terminal*: The application/interface through which an individual interact.
+The *Shell* is the program that interprets commands typed into the terminal.
+Linux supports several different shells, for this module, I focused on **Bash** (Bourne Again SHell).
 I learned that Bash provides several useful features:
 - Command history
 - Command editing
@@ -47,41 +48,48 @@ I learned that Bash provides several useful features:
 - Functions
 - Scripting
 
-## 5.3 - Understanding the Linux Prompt
+### 5.3 - Understanding the Linux Prompt
 When I opened the terminal, I saw a prompt similar to:
+
 ```bash
 sysadmin@localhost:~$
 ```
-- sysadmin: This is the username of the current user.
-- localhost: This identifies the computer/system.
-- ~ : The tilde represents the user's home directory.
-- $ : This indicates that the shell is ready to accept a command as a normal user.
+- `sysadmin`: This is the username of the current user.
+- `localhost`: This identifies the computer/system.
+- `~` : The tilde represents the user's home directory.
+- `$` : This indicates that the shell is ready to accept a command as a normal user.
 
-## 5.4 - Commands
-A command is a program or instruction that tells Linux to perform an action.A command is a program or shell instruction that performs an action. The basic structure is: > 
-
+### 5.4 - Commands
+A *Command* is a program or instruction that tells Linux to perform an action.The basic structure is:  
 
 ```bash
 ls 
 ```
+<img width="494" height="30" alt="ls" src="https://github.com/user-attachments/assets/f68337b2-720f-4fdc-8025-a792ec6f4732" />
+
 This command displays the files and directories in the current directory.
 
-## 5.5 - Arguments
-An argument tells the command what it should act on. It gives a command additional information.
+### 5.5 - Arguments
+An *Argument* tells the command what it should act on. It gives a command additional information.
 
 ```bash
 ls /etc/ppp
 ```
 `ls` is the command, `/etc/ppp` is the argument). The command means: List the contents of /etc/ppp.
 
+<img width="494" height="34" alt="ls etc" src="https://github.com/user-attachments/assets/5b9d99fa-a49d-41ae-b685-691c9f8ea0fc" />
+
 I learned that arguments are essentially the targets or additional information that a command needs.
 
-## 5.6 - Options
-An option changes or extends the behavior of a command. They modify how a command behaves.
+### 5.6 - Options
+An *Option* changes or extends the behavior of a command. They modify how a command behaves.
 
 ```bash
 ls -lr
 ```
+
+<img width="496" height="147" alt="ls -lr" src="https://github.com/user-attachments/assets/8f68e29b-eeb6-46de-ad8b-7d8bfe03a499" />
+
 The `-r `option produces reverses the order. Therefore, the command provides a long listing but in reverse order. These are equivalent:
 
 ```bash
@@ -89,7 +97,12 @@ ls -l -r
 ls -lr
 ls -rl
 ```
-## 5.6 - Human-Readable File Sizes
+<img width="514" height="292" alt="ls -l -r" src="https://github.com/user-attachments/assets/8d1ebf9b-7a66-40d1-933c-f6225aba69d7" />
+
+
+
+
+### 5.7 - Human-Readable File Sizes
 I also learned that file sizes can be easier to understand
 
 ```bash
@@ -97,12 +110,13 @@ ls -lh /usr/bin/perl
 ```
 The `-h` option means human-readable.
 
-## 5.7 - Linux Is Case-Sensitive
+### 5.8 - Linux Is Case-Sensitive
 Linux distinguishes between uppercase and lowercase characters.
 `ls` is different from `LS` .When using Linux, commands, filenames, variables and options must be typed correctly.
 
-## 5.8 - Command History
-Bash keeps a history of commands that I have previously executed.Command history is particularly useful when working with long commands or commands that I frequently repeat.
+### 5.9 - Command History
+Bash keeps a history of commands that I have previously executed.
+*Command history* is particularly useful when working with long commands or commands that I frequently repeat.
 
 ```bash
 history
@@ -120,10 +134,10 @@ For the most recent command:
 !!
 ```
 
-## 5.8 - Variables - Local and Environment Variables
-A variable is a named piece of information stored by the shell.
-A local variable exists within the current shell.
-Environment variables are variables that are available to processes started from the shell.
+### 5.10 - Variables - Local and Environment Variables
+A *Variable* is a named piece of information stored by the shell.
+A *Local variable* exists within the current shell.
+*Environment variables* are variables that are available to processes started from the shell.
 
 ```bash
 variable1='Something'
