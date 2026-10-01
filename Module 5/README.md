@@ -37,9 +37,10 @@ I learned is that the CLI works similarly across different Linux distributions. 
 - *Portability*: Graphical interfaces vary wildly between distributions (Ubuntu vs. Fedora vs. Debian), but CLI commands generally remain the same. Learning the CLI gives you a transferable skill.
 
 ### 5.2 - The Terminal vs Shell
-- *Terminal*: The application/interface through which an individual interact.
-The *Shell* is the program that interprets commands typed into the terminal.
-Linux supports several different shells, for this module, I focused on **Bash** (Bourne Again SHell).
+*Terminal*: The application/interface through which an individual interact.
+
+The *Shell* is the program that interprets commands typed into the terminal. Linux supports several different shells, for this module, I focused on **Bash** (Bourne Again SHell).
+
 I learned that Bash provides several useful features:
 - Command history
 - Command editing
@@ -82,10 +83,9 @@ I learned that arguments are essentially the targets or additional information t
 ### 5.6 - Options
 An *Option* changes or extends the behavior of a command. They modify how a command behaves.
 
-For example: `ls -lr`<img width="514" height="149" alt="ls -rl" src="https://github.com/user-attachments/assets/4408c932-c982-4e31-9433-9085ba0c98b6" />
+For example: `ls -lr`
 
-
-<img width="496" height="147" alt="ls -lr" src="https://github.com/user-attachments/assets/8f68e29b-eeb6-46de-ad8b-7d8bfe03a499" />
+<img width="496" height="147" alt="ls -lr" src="https://github.com/user-attachments/assets/744811db-71c7-42d0-a349-7cd49758b9de" />
 
 The `-r `option produces reverses the order. Therefore, the command provides a long listing but in reverse order. These are equivalent:
 
@@ -94,9 +94,9 @@ ls -l -r
 ls -lr
 ls -rl
 ```
-<img width="514" height="292" alt="ls -l -r" src="https://github.com/user-attachments/assets/8d1ebf9b-7a66-40d1-933c-f6225aba69d7" />
+<img width="514" height="292" alt="ls -l -r" src="https://github.com/user-attachments/assets/a982a466-593d-4799-a8d9-72e6d83eea3b" />
 
-<img width="514" height="149" alt="ls -rl" src="https://github.com/user-attachments/assets/2a9324c7-df18-4e32-bd90-8020ab043026" />
+<img width="514" height="149" alt="ls -rl" src="https://github.com/user-attachments/assets/a509cce4-b025-4358-9d14-951e5e1018d2" />
 
 ### 5.7 - Human-Readable File Sizes
 I also learned that file sizes can be easier to understand
@@ -104,6 +104,7 @@ I also learned that file sizes can be easier to understand
 ```bash
 ls -lh /usr/bin/perl
 ```
+
 The `-h` option means human-readable.
 
 ### 5.8 - Linux Is Case-Sensitive
@@ -114,21 +115,12 @@ Linux distinguishes between uppercase and lowercase characters.
 Bash keeps a history of commands that I have previously executed.
 *Command history* is particularly useful when working with long commands or commands that I frequently repeat.
 
-```bash
-history
-```
-It displays command history with numbers.
+For example: 
+- `history` : It displays command history with numbers.
+- `!3` : It displays the command under number 3.
+- `!!` : It displays the most recent command.
 
-If a command has number 3, I learnt to run:
-
-```bash
-!3
-```
-
-For the most recent command:
-```bash
-!!
-```
+<img width="499" height="229" alt="History" src="https://github.com/user-attachments/assets/5678ffc3-16de-45e0-add6-bd00dc1860a6" />
 
 ### 5.10 - Variables - Local and Environment Variables
 A *Variable* is a named piece of information stored by the shell.
@@ -141,15 +133,13 @@ export variable1
 echo $variable1
 ```
 
+<img width="507" height="62" alt="Variable" src="https://github.com/user-attachments/assets/b7a10e8e-9939-4bfb-8821-855ecad05be2" />
+
 What it does: Creates a local variable named `variable1`, turns it into an environment variable using `export`, and prints its value to the screen using `echo`.
-A local variable can be exported. After exporting it, it becomes an environment variable. To check environment variables: 
+A local variable can be exported. After exporting it, it becomes an environment variable. To check environment variables, type `env`.
 
-```bash
-env
-```
-
-#### Differences Between Local vs. Environment Variables
-*Scope*: 
+### Differences Between Local vs. Environment Variables
+*1. Scope*: 
 - Local Variable: Exists only in current shell.
 - Environment Variable: Available to the environment and child processes
   
