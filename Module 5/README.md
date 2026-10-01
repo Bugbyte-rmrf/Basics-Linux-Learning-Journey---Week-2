@@ -211,9 +211,9 @@ For example: `echo The service costs \$1 and the path is $PATH`
 
 The above command will display:The service costs $1 and the path is /usr/bin:...
 
-4. ` ` `: backquotes. Backquotes can be used for command substitution.Command substitution allows the output of one command to become part of another command.
+4. `````: backquotes. Backquotes can be used for command substitution.Command substitution allows the output of one command to become part of another command.
 
-For example: ` echo Today is `date` `
+For example: ` echo Today is `date```
 
 <img width="512" height="32" alt="Single slash" src="https://github.com/user-attachments/assets/118fbd50-7483-4565-9198-d6da46a176c3" />
 
