@@ -11,6 +11,8 @@ This document is divided into three main sections to fulfill the assignment requ
 
 ### A. Hands-on Work & Concept Breakdown
 
+---
+
 ### 5.1 - The Command Line Interface (CLI)
 The CLI allows a user to interact with Linux by typing commands instead of relying on a graphical interface.I learned that the important thing is not to memorize everything immediately, but to understand the structure and logic behind commands.
 
